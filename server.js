@@ -135,6 +135,21 @@ app.get("/tattooly/:id/edit", async (req, res) => {
 })
 
 
+//** UPDATE ROUTE */
+
+app.put("/tattooly/:id", async (req, res) => {
+    try {
+        const id = req.params.id
+
+        await Tattoo.findByIdAndUpdate(id, req.body)
+
+        res.redirect(`/tattooly/${id}`) // this sends back to show - can change to index if better UX
+    }  catch(error) {
+
+        res.status(400).send(error.message)
+    }
+})
+
 //** SHOW ROUTE */
 
 app.get("/tattooly/:id", async (req , res) => {
