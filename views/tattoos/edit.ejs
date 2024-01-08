@@ -6,9 +6,9 @@
 
     <main>
       <div>
-        <form action="/tattooly" method="post">
+        <form action="/tattooly<%= tattoo._id %>?_method=PUT" method="post">
           <fieldset>
-              <legend>Add Tattoo</legend>
+              <legend>Edit Tattoo</legend>
             <label>
               IMAGE:<input
                 type="text"
@@ -24,7 +24,7 @@
               />
             </label>
           </fieldset>
-          <input type="submit" value="create new tattoo" />
+          <input type="submit" value="Update Tattoo" />
         </form>
       </div>
     </main>

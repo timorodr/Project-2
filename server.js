@@ -101,6 +101,40 @@ app.get("/tattooly/new", (req, res) => {
     res.render("tattoos/new.ejs")
 })
 
+
+//** CREATE ROUTE */
+
+app.post("/tattooly", async (req, res) => {
+    try {
+        await Tattoo.create(req.body)
+
+        res.redirect("/tattooly")
+
+    } catch(error) {
+
+        res.status(400).send(error.message)
+    }
+})
+
+//** EDIT ROUTE */
+
+app.get("/tattooly/:id/edit", async (req, res) => {
+    try {
+
+        const id = req.params.id
+
+        const tattoo = await Tattoo.findById(id)
+
+        res.render("tattoos/edit.ejs", { tattoo })
+        
+    } catch(error) {
+
+        res.status(400).send(error.message)
+    }
+
+})
+
+
 //** SHOW ROUTE */
 
 app.get("/tattooly/:id", async (req , res) => {
