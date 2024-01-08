@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body>
+
+    <main>
+      <div>
+        <form action="/tattooly" method="post">
+          <fieldset>
+              <legend>Add a tattoo</legend>
+            <label>
+              IMAGE:<input
+                type="text"
+                name="image"
+                placeholder="photo url"
+              />
+            </label>
+            <label>
+              DESCRIPTION:<input
+                type="text"
+                name="description"
+                placeholder="caption"
+              />
+            </label>
+          </fieldset>
+          <input type="submit" value="create new fruit" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

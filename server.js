@@ -4,6 +4,8 @@ const express = require("express")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
 const mongoose = require("mongoose")
+
+// const fs = require("fs")
 // const Tattoo = require("./models/Tattoo.js")
 
 // .env variables
@@ -23,8 +25,8 @@ const { Schema, model } = mongoose
 
 const tattooSchema = new Schema({
     image: {
-        type: Buffer,
-        required: true
+       type: String,
+       required: true
     },
     description: {
         type: String
@@ -47,6 +49,7 @@ app.use(morgan("dev"))
 app.use(methodOverride("_method"))
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
+
 
 
 //** ROUTES */
@@ -74,6 +77,46 @@ app.get("/tattooly/seed", async (req, res) => {
     }
 })
 
+
+//** INDEX ROUTE */ 
+// NEED TO GET IMAGES SHOWING ON INDEX PAGE
+
+app.get("/tattooly", async (req, res) => {
+    try {
+
+        const tattoos = await Tattoo.find({})
+        res.render("tattoos/index.ejs", {tattoos})
+
+    } catch(error) {
+
+        res.status(400).send(error.message)
+    }
+})
+
+
+
+//** NEW ROUTE */
+
+app.get("/tattooly/new", (req, res) => {
+    res.render("tattoos/new.ejs")
+})
+
+//** SHOW ROUTE */
+
+app.get("/tattooly/:id", async (req , res) => {
+    try {
+
+        const id = req.params.id
+
+        const tattoo = await Tattoo.findById(id)
+
+        res.render("tattoos/show.ejs", {tattoo})
+
+    } catch(error) {
+
+        res.status(400).send(error.message)
+    }
+})
 
 //** SERVER LISTENER */
 app.listen(PORT, () => {

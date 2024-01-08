@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* "profile profile budget budget calendar calendar add-post add-post"
+"profile profile budget budget calendar calendar add-post add-post"
+"profile profile posts posts posts posts posts posts"
+"profile profile posts posts posts posts posts posts"
+"profile profile posts posts posts posts posts posts"
+"profile profile posts posts posts posts posts posts"
+"profile profile posts posts posts posts posts posts"
+"profile profile posts posts posts posts posts posts"; */
+
+#container {
+    display: grid;
+    grid-template-areas: 
+        "aside aside header header header header header header"
+        "aside aside header header header header header header"
+        "aside aside section section section section section section"
+        "aside aside section section section section section section"
+        "aside aside section section section section section section"
+        "aside aside section section section section section section"
+        "aside aside section section section section section section";
+    height: 100dvh;
+}
+
+header {
+    grid-area: header;
+    background-color: purple;
+} 
+
+section {
+    grid-area: section;
+    background-color: red;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+.app-name {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.profile-photo {
+    text-align: center;
+}
+
+.profile-photo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-photo p {
+    margin-top: 10px;
+}
+
+.profile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include("../partials/head.ejs") %>
+
+<body>
+    <div id="container">
+        <header>
+            <main>
+                <div>
+                    <a href="/tattooly/new"><button>Add a Tattoo</button></a>
+                </div>
+              </main>
+        </header>
+        <aside>
+            <div class="app-name">
+                <h1>Tattooly</h1>
+            </div>
+
+            <div class="profile">
+                <div class="profile-photo">
+                    <img src="https://media.licdn.com/dms/image/C5603AQEi7gUPi-Pu8w/profile-displayphoto-shrink_400_400/0/1652236717319?e=2147483647&v=beta&t=LUJF53pNIiKDSDrS_hq6T3GdjTMlen8HHQz4DpRHjsE" alt="tim">
+                    <p>Tim Rodriguez</p>
+                    <p>@Nanero</p>
+                </div>
+            </div>
+            <div class="profile-menu">
+                <div class="profile-artists">Artists</div>
+                <div class="profile-calendar">Edit Calendar</div>
+                <div class="profile-budget">Edit Budget</div>
+                <div class="profile-settings">Settings</div>
+                <div class="profile-logout">Logout</div>
+            </div>
+        </aside>
+        <section>
+            <% for (tattoo of tattoos) { %>
+            
+            <article>
+                <a href="/tattooly/<%= tattoo._id %>">
+                <h3>
+                    <%= tattoo.image %> - <%= tattoo.description %> - <%= tattoo.uploadDate %>
+                </h3></a>
+            </article>
+            
+            
+            
+            <% } %>
+        </section>
+    </div>
+</body>
+</html>
