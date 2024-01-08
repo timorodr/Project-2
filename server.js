@@ -144,7 +144,24 @@ app.put("/tattooly/:id", async (req, res) => {
         await Tattoo.findByIdAndUpdate(id, req.body)
 
         res.redirect(`/tattooly/${id}`) // this sends back to show - can change to index if better UX
+
     }  catch(error) {
+
+        res.status(400).send(error.message)
+    }
+})
+
+//** DESTROY ROUTE */
+
+app.delete("/tattooly/:id", async(req, res) => {
+    try {
+        const id = req.params.id
+
+        await Tattoo.findByIdAndDelete(id)
+
+        res.redirect("/tattooly")
+        
+    } catch(error) {
 
         res.status(400).send(error.message)
     }
