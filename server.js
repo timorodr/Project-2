@@ -3,41 +3,15 @@ require("dotenv").config()
 const express = require("express")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
-const mongoose = require("mongoose")
+
+const Tattoo = require("./models/Tattoo.js")
 
 // const fs = require("fs")
-// const Tattoo = require("./models/Tattoo.js")
 
 // .env variables
-const {DATABASE_URL, SECRET, PORT} = process.env
 
 
-//** DATABASE CONNECTION */
-mongoose.connect(DATABASE_URL)
 
-mongoose.connection
-.on("open", () => { console.log("CONNECTED TO THE MONGOOSE")})
-.on("close", () => { console.log("DISCONNECTED TO THE MONGOOSE")})
-.on("error", (error) => { console.log(error)})
-
-
-const { Schema, model } = mongoose
-
-const tattooSchema = new Schema({
-    image: {
-       type: String,
-       required: true
-    },
-    description: {
-        type: String
-    },
-    uploadDate: {
-        type: Date,
-        default: Date.now
-    }
-})
-
-const Tattoo = model("Tattoo", tattooSchema)
 
 
 //** CREATE APP OBJECT */
@@ -160,7 +134,7 @@ app.delete("/tattooly/:id", async(req, res) => {
         await Tattoo.findByIdAndDelete(id)
 
         res.redirect("/tattooly")
-        
+
     } catch(error) {
 
         res.status(400).send(error.message)
@@ -185,6 +159,8 @@ app.get("/tattooly/:id", async (req , res) => {
 })
 
 //** SERVER LISTENER */
+
+const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 })

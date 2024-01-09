@@ -1,7 +1,24 @@
 // //** OUR MODELS */
 
-// const mongoose = require("mongoose")
+const mongoose = require("./connection")
 
 
+const { Schema, model } = mongoose
 
-// module.exports = Tattoo
+const tattooSchema = new Schema({
+    image: {
+       type: String,
+       required: true
+    },
+    description: {
+        type: String
+    },
+    uploadDate: {
+        type: Date,
+        default: Date.now
+    }
+})
+
+const Tattoo = model("Tattoo", tattooSchema)
+
+module.exports = Tattoo
