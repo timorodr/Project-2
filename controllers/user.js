@@ -51,12 +51,23 @@ router.post("/login", async (req, res) => {
             throw new Error("Password does not match")
         }
 
+        req.session.username = username
+        req.session.loggedIn = true
+
+
         res.redirect("/tattooly")
         } catch (error) {
 
         res.status(400).send(error.message);
         }
     
+})
+
+router.get("/logout", (req, res) => {
+    // destroy and redirect to main page
+    req.session.destroy((err) => {
+        res.redirect("/")
+    })
 })
 
 module.exports = router

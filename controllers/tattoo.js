@@ -11,10 +11,15 @@ const router = express.Router()
 
 
 
-//** ROUTES */
-// router.get("/", (req, res) => {
-//     res.send("Its working man")
-// })
+//** ROUTER MIDDLEWARE */
+
+router.use((req, res, next) => {
+    if(req.session.loggedIn){
+        next()
+    } else {
+        res.redirect("/user/login")
+    }
+})
 
 
 
