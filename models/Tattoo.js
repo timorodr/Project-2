@@ -16,6 +16,9 @@ const tattooSchema = new Schema({
     uploadDate: {
         type: Date,
         default: Date.now
+    },
+    username: {
+        type: String
     }
 })
 

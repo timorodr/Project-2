@@ -29,7 +29,10 @@ router.use((req, res, next) => {
 router.get("/", async (req, res) => {
     try {
 
-        const tattoos = await Tattoo.find({})
+        const username = req.session.username
+
+        const tattoos = await Tattoo.find({ username })
+
         res.render("tattoos/index.ejs", {tattoos})
 
     } catch(error) {
@@ -51,6 +54,9 @@ router.get("/new", (req, res) => {
 
 router.post("/", async (req, res) => {
     try {
+
+        req.body.username = req.session.username
+
         await Tattoo.create(req.body)
 
         res.redirect("/tattooly")
