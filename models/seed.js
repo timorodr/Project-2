@@ -24,8 +24,10 @@ mongoose.connection.on("open", async (req, res) => {
         
         // close the DB connection
         mongoose.connection.close();
+
     } catch(error) {
-        console.log(error.message)
-        res.status(400).send(error.message)
+
+        console.log("---------", error.message, "-----------")
+        
     }
 })

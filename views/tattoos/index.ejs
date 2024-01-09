@@ -37,12 +37,12 @@
             
             <article>
                 <a href="/tattooly/<%= tattoo._id %>">
-                <h3>
-                    <%= tattoo.image %> - <%= tattoo.description %> - <%= tattoo.uploadDate %>
-                </h3></a>
+                <div>
+                    <img src="<%=tattoo.image%>" alt="<%= tattoo.description %><"> <!-- Think more through in the future-->
+                    <h3><%= tattoo.description %></h3>
+                    <h3><%= tattoo.uploadDate %></h3>
+                </div></a>
             </article>
-            
-            
             
             <% } %>
         </section>
