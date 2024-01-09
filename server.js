@@ -6,6 +6,8 @@ const methodOverride = require("method-override")
 const Tattoo = require("./models/Tattoo.js")
 const TattooRouter = require("./controllers/tattoo.js")
 const UserRouter = require("./controllers/user.js")
+const session = require("express-session")
+const MongoStore = require("connect-mongo")
 
 // const fs = require("fs")
 
@@ -23,6 +25,12 @@ app.use(morgan("dev"))
 app.use(methodOverride("_method"))
 app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
+app.use(session({
+    secret: process.env.SECRET,
+    store: MongoStore.create({mongoUrl: process.env.DATABASE_URL}),
+    saveUninitialized: true,
+    resave: false,
+}))
 app.use("/tattooly", TattooRouter)
 app.use("/user", UserRouter)
 
