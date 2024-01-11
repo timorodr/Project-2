@@ -128,4 +128,11 @@ aside {
     justify-content: space-around;
     position: sticky;
     top: 0;
+    padding: 20px;
+}
+
+#budget {
+    border: solid green 3px;
+    display: flex;
+    flex-direction: column;
 }

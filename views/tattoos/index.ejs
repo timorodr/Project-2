@@ -6,18 +6,19 @@
 <body>
     <div id="container">
         <header class="budget-cal-add">
-           
-                <div>
-                    Budget
-                </div>
-                <div>
-                    Next Appointment
-                </div>
+            <div id="budget">
+                <h2>Budget</h2>
+                <h1>$4000</h1>
+            </div>    
+            <div>
+                <h2>Next Appointment</h2>
+                <h1>04/15/2024</h1>
+            </div>
                 <div>
                     <a href="/tattooly/new"><button>+ Add a Tattoo</button></a>
                 </div>
-            
         </header>
+
         <aside>
             <div class="app-name">
                 <h1>Tattooly</h1>
@@ -38,6 +39,7 @@
                 <div class="profile-logout"><a href="/user/logout"><button>Logout</button></a></div>
             </div>
         </aside>
+
         <section class="art-container">
             <% for (tattoo of tattoos) { %>
             
