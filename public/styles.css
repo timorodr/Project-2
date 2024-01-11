@@ -90,6 +90,10 @@ aside {
     }
 }
 
+.logo{
+    mix-blend-mode: color-burn;
+}
+
 .app-name {
     background-color: #f0f0f0;
     padding: 20px;
