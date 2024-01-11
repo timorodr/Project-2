@@ -9,8 +9,6 @@ const UserRouter = require("./controllers/user.js")
 const session = require("express-session")
 const MongoStore = require("connect-mongo")
 
-// const fs = require("fs")
-
 
 //** CREATE APP OBJECT */
 const app = express()
