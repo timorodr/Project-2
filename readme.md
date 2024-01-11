@@ -19,7 +19,6 @@
 
 ## Route Map
 
-Below should be a table listing the different routes in your app and their purposes.
 
 | Route Name | Endpoint | Method | Description |
 |------------|----------|--------|-------------|
