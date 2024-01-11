@@ -6,15 +6,15 @@
    
     <main>
       <div>
-
+        <a href="/tattooly/"><button>Back to Main</button></a>
         <article>
-          <h2><%= tattoo.image %> - <%= tattoo.description %></h2>
+          <img src="<%= tattoo.image %> " alt="tattoo photo">
+          <h2><%= tattoo.description %></h2>
           <h3><%= tattoo.uploadDate %>/h3>
           <a href="/tattooly/<%= tattoo._id %>/edit"><button>Edit</button></a>
           <form action="/tattooly/<%= tattoo._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete"/>
           </form>
-          <a href="/tattooly/"><button>Back to Main</button></a>
         </article>
 
       </div>

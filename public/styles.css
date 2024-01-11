@@ -1,7 +1,13 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* margin: 0;
+    padding: 0; */
 }
 
 /* "profile profile budget budget calendar calendar add-post add-post"
@@ -23,7 +29,7 @@ body {
         "aside aside section section section section section section"
         "aside aside section section section section section section"
         "aside aside section section section section section section";
-    height: 100dvh;
+    height: 100vh;
 }
 
 header {
@@ -39,6 +45,46 @@ section {
 aside {
     grid-area: aside;
     background-color: blue;
+}
+
+.add-btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+.art-container {
+    padding: 20px;
+    columns: 4;
+    column-gap: 20px;
+}
+
+.art-container .index-bento {
+    width: 100%;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+.art-container .index-bento img{
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+@media (max-width: 1200px) {
+    .art-container {
+        /* width: calc(100% - 40px); */
+        columns: 3;
+
+    }
+}
+
+
+@media (max-width: 760px) {
+    .art-container {
+        columns: 2;
+
+    }
 }
 
 .app-name {
