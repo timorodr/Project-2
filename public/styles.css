@@ -4,10 +4,13 @@
     box-sizing: border-box;
 }
 
+
+/** INDEX */
+
 body {
     font-family: Arial, sans-serif;
-    /* margin: 0;
-    padding: 0; */
+    margin: 0;
+    padding: 0;
 }
 
 /* "profile profile budget budget calendar calendar add-post add-post"
@@ -96,7 +99,7 @@ aside {
 .profile {
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 0 80px 0 80px;
 }
 
 .profile-photo {
@@ -118,4 +121,11 @@ aside {
     flex-direction: column;
     align-items: center;
     padding: 10px;
+}
+
+.budget-cal-add {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
 }
