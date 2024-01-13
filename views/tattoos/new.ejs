@@ -2,31 +2,24 @@
 <html lang="en">
   <%- include("../partials/head.ejs") %>
 
-  <body>
+  <body class="new-body">
+    <!-- <img src="https://i.gifer.com/PsxK.gif" alt="tattoo-bg" class="form-bg"> -->
 
-    <main>
-      <div>
-        <form action="/tattooly" method="post">
-          <fieldset>
-              <legend>Add Tattoo</legend>
-            <label>
-              This is a sentence<input
-                type="text"
-                name="image"
-                placeholder="photo url"
-              />
-            </label>
-            <label>
-              DESCRIPTION:<input
-                type="text"
-                name="description"
-                placeholder="caption"
-              />
-            </label>
-          </fieldset>
-          <input type="submit" value="create new tattoo" />
-        </form>
+    
+      <div class="form-container">
+          <form action="/tattooly" method="post">
+            <h1 class="new-h1">Add Tattoo</h1>
+            <div class="input-box">
+              <input type="text" name="image" placeholder="Reference tattoo photo"/>
+              <i class='bx bxs-image-add'></i>
+            </div>
+            <div class="input-box">
+              <input type="text" name="description" placeholder="What you like about the ref photo"/>
+              <i class='bx bxs-comment-add'></i>
+            </div>
+            <input type="submit" value="create new tattoo" class="create-btn"/>
+          </form>
       </div>
-    </main>
+  
   </body>
 </html>
