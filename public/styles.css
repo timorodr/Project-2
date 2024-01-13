@@ -37,7 +37,7 @@ body {
 
 header {
     grid-area: header;
-    background-color: whitesmoke;
+    background-color: #f5ebe0;;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
 } 
 
@@ -49,12 +49,12 @@ header::after {
 
 section {
     grid-area: section;
-    background-color: whitesmoke;
+    background-color: #f5ebe0;
 }
 
 aside {
     grid-area: aside;
-    background-color: rgba(99, 89, 89, 0.224);
+    background-color: #d6ccc2;
 }
 
 .add-btn {
@@ -64,6 +64,31 @@ aside {
     margin-right: 1rem;
 }
 
+a {
+    text-decoration: none;
+}
+
+#the_thing, #the_thing2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+#the_thing::backdrop, #the_thing2::backdrop {
+    background: transparent;
+    backdrop-filter: blur(4px);
+   
+}
+.index-description, .index-date{
+    width: 100%;
+    font-size: 10pt;
+    text-decoration: none;
+}
 .art-container {
     padding: 20px;
     columns: 4;
@@ -101,6 +126,7 @@ aside {
    mix-blend-mode: color-burn;
    height: 100px;
    width: 200px;
+   margin: auto;
 }
 
 .app-name {
@@ -158,17 +184,21 @@ aside {
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
-    background-image: url("https://i.gifer.com/PsxK.gif");
+    background-color: #e3d5ca;
+    background-image: url("https://assets.phillips.com/image/upload/t_Website_LotDetailMainImage/v1/auctions/UK030118/203_001.jpg");
     background-repeat: none;
     background-size: cover;
+    background-position: center;
 }
 
 .form-container {
     width: 420px;
-    background: rgb(240, 144, 235);
+    background: transparent;
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
     /* margin-top: 30%; */
 }
 
@@ -255,3 +285,29 @@ input[type="submit"]:hover {
     position: absolute;
     height: 100dvh;
 }  */
+
+/**SHOW PAGE */
+#show-body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.show-container {
+    padding: 20px;
+    columns: 3;
+    column-gap: 20px;
+    background-color: #d5bdaf;
+    height: 100dvh;
+}
+
+.show-container .show-frame {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.show-container .show-frame img {
+    max-width: 100%;
+    border-radius: 15px;
+}

@@ -2,15 +2,14 @@
 <html lang="en">
   <%- include("../partials/head.ejs") %>
 
-  <body>
+  <body id="show-body">
    
-    <main>
-      <div>
-        <a href="/tattooly/"><button>Back to Main</button></a>
-        <article>
+      <div class="show-container">
+        <a href="/tattooly/"><button><i class='bx bx-arrow-back'></i></button></a>
+        <article class="show-frame">
           <img src="<%= tattoo.image %> " alt="tattoo photo">
-          <h2><%= tattoo.description %></h2>
-          <h3><%= tattoo.uploadDate %>/h3>
+          <h2 class="tattoo-description"><%= tattoo.description %></h2>
+          <h3 class="tattoo-date"><%= tattoo.uploadDate %>/h3>
           <a href="/tattooly/<%= tattoo._id %>/edit"><button>Edit</button></a>
           <form action="/tattooly/<%= tattoo._id %>?_method=DELETE" method="POST">
             <input type="submit" value="Delete"/>
@@ -18,6 +17,5 @@
         </article>
 
       </div>
-    </main>
   </body>
 </html>

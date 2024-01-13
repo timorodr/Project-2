@@ -33,8 +33,20 @@
             </div>
             <div class="profile-menu">
                 <div class="profile-artists">Artists</div>
-                <div class="profile-calendar">Edit Calendar</div>
-                <div class="profile-budget">Edit Budget</div>
+                <div class="profile-calendar">
+                    <button onclick="the_thing.showModal()">Edit Calendar</button>
+                    <dialog id="the_thing">
+                        <h1>Edit calendar vibratinos ensuing</h1>
+                        <button onclick="the_thing.close()">Put that thing back or so help me God</button>
+                    </dialog>
+                </div>
+                <div class="profile-budget">
+                    <button onclick="the_thing2.showModal()">Edit Budget</button>
+                    <dialog id="the_thing2">
+                        <h1>Edit The damn budget playa</h1>
+                        <button onclick="the_thing2.close()">Put that thing back or so help me God</button>
+                    </dialog>
+                </div>
                 <div class="profile-settings">Settings</div>
                 <div class="profile-logout"><a href="/user/logout"><button>Logout</button></a></div>
             </div>
@@ -44,11 +56,11 @@
             <% for (tattoo of tattoos) { %>
             
             <div>
-                <a href="/tattooly/<%= tattoo._id %>">
                 <div class="index-bento">
-                    <img src="<%=tattoo.image%>" alt="<%= tattoo.description %><"> <!-- Think more through in the future-->
-                    <p><%= tattoo.description %></p>
-                    <p><%= tattoo.uploadDate %></p>
+                    <a href="/tattooly/<%= tattoo._id %>">
+                    <img src="<%=tattoo.image%>" alt="<%= tattoo.description %>"> <!-- Think more through in the future-->
+                    <p class="index-description"><%= tattoo.description %></p>
+                    <p class="index-date"><%= tattoo.uploadDate %></p>
                 </div>
                 </a>
             </div>
