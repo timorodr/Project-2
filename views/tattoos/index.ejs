@@ -8,7 +8,7 @@
         <header class="budget-cal-add">
             <div id="budget">
                 <h2>Budget</h2>
-                <h1 id="budget-dollars">$4000</h1>
+                <h1 id="budget-dollars">$</h1> <!-- fix this-->
             </form>
             </div>    
             <div>
@@ -16,7 +16,7 @@
                 <h1>04/15/2024</h1>
             </div>
                 <div>
-                    <a href="/tattooly/new"><button>+ Add a Tattoo</button></a>
+                    <a href="/tattooly/new"><button class="add-btn">+ Add a Tattoo</button></a>
                 </div>
         </header>
 
@@ -29,30 +29,31 @@
                 <div class="profile-photo">
                     <img src="https://media.licdn.com/dms/image/C5603AQEi7gUPi-Pu8w/profile-displayphoto-shrink_400_400/0/1652236717319?e=2147483647&v=beta&t=LUJF53pNIiKDSDrS_hq6T3GdjTMlen8HHQz4DpRHjsE" alt="tim">
                     <p>Tim Rodriguez</p>
-                    <p>@Nanero</p>
+                    <p>@NANERO</p>
                 </div>
             </div>
             <div class="profile-menu">
                 <div class="profile-artists">Artists</div>
                 <div class="profile-calendar">
-                    <button onclick="the_thing.showModal()">Edit Calendar</button>
+                    <button onclick="the_thing.showModal()" class="calendar-btn">Edit Calendar</button>
                     <dialog id="the_thing">
                         <h1>Edit calendar vibratinos ensuing</h1>
                         <button onclick="the_thing.close()">Put that thing back or so help me God</button>
                     </dialog>
                 </div>
                 <div class="profile-budget">
-                    <button onclick="the_thing2.showModal()">Edit Budget</button>
+                    <button onclick="the_thing2.showModal()" class="budget-btn">Edit Budget</button>
                     <dialog id="the_thing2">
-                        <form id="update-budget">
+                        <form id="update-budget" method="post">
                             <label for="newBudget">Add to Budget:</label>
-                            <input type="text" id="newBudget" name="newBudget" required>
-                            <button type="button" onclick="updateBudget(); the_thing2.close()">Update Budget</button>
+                            <input type="text" id="newBudget" name="budget" value="$" required>
+                            <button type="button" onclick="updateBudget(); the_thing2.close();" value="Update Budget">Update Budget</button>
                         </form>
                         <script>
                             function updateBudget() {
                                 let newBudget = document.getElementById("newBudget").value
                                 document.getElementById("budget-dollars").innerText = newBudget
+                                
                             }
                         </script>
                         <!-- <button onclick="the_thing2.close()">Put that thing back or so help me God</button> -->

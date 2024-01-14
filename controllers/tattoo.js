@@ -30,8 +30,10 @@ router.get("/", async (req, res) => {
     try {
 
         const username = req.session.username
-
+        console.log(username)
         const tattoos = await Tattoo.find({ username })
+
+        // const budget = req.session.budget
 
         res.render("tattoos/index.ejs", {tattoos})
 

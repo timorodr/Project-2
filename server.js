@@ -17,6 +17,11 @@ app.get("/", (req, res) => {
     res.render("index.ejs")
 })
 
+// app.get("/", async (req, res) => {
+//     const budget = await req.session.budget
+//     res.render("index.ejs")
+// })
+
 //** MIDDLEWARE */
 
 app.use(morgan("dev"))

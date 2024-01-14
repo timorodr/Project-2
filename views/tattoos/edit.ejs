@@ -2,31 +2,37 @@
 <html lang="en">
   <%- include("../partials/head.ejs") %>
 
-  <body>
+  <body class="edit-body">
 
-    <main>
-      <div>
+
+      <div class="edit-container">
         <form action="/tattooly/<%= tattoo._id %>?_method=PUT" method="post">
-          <fieldset>
-              <legend>Edit Tattoo</legend>
-            <label>
-              IMAGE:<input
-                type="text"
-                name="image"
-                placeholder="photo url"
-              />
-            </label>
-            <label>
-              DESCRIPTION:<input
-                type="text"
-                name="description"
-                placeholder="caption"
-              />
-            </label>
-          </fieldset>
-          <input type="submit" value="Update Tattoo" />
+        
+            <h1 class="edit-h1">Edit Tattoo</h1>
+            
+            <div class="edit-input">
+              <input type="text" name="description" placeholder="Description"/>
+            </div class="edit-input">
+         
+            <input type="submit" value="Update Tattoo" class="edit-btn" />
         </form>
       </div>
-    </main>
+
   </body>
 </html>
+
+<!-- 
+<div class="form-container">
+  <form action="/tattooly" method="post">
+    <h1 class="new-h1">Add Tattoo</h1>
+    <div class="input-box">
+      <input type="text" name="image" placeholder="Reference tattoo photo"/>
+      <i class='bx bxs-image-add'></i>
+    </div>
+    <div class="input-box">
+      <input type="text" name="description" placeholder="What you like about the ref photo"/>
+      <i class='bx bxs-comment-add'></i>
+    </div>
+    <input type="submit" value="Share" class="create-btn"/>
+  </form>
+</div> -->

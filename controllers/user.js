@@ -38,7 +38,7 @@ router.get("/login", (req, res) => {
 
 router.post("/login", async (req, res) => {
     try {
-        const { username, password } = req.body
+        const { username, password, profilePicture } = req.body
         const user = await User.findOne({ username })
 
         if(!user) {
@@ -52,6 +52,7 @@ router.post("/login", async (req, res) => {
         }
 
         req.session.username = username
+        // req.session.profilePicture = profilePicture
         req.session.loggedIn = true
 
 

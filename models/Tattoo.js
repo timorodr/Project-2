@@ -19,6 +19,9 @@ const tattooSchema = new Schema({
     },
     username: {
         type: String
+    },
+    budget: {
+        type: String
     }
 })
 
