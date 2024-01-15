@@ -17,9 +17,13 @@
     --login-3: #FF006E;
     --login-4: #8338EC;
     --login-5: #3A86FF;
+
+    --textcolor-1: hsl(338, 70%, 55%);
+    --textcolor-2: hsl(183, 70%, 62%);
+    --textcolor-3: hsl(334, 7%, 95%);
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -576,4 +580,59 @@ input[type="submit"]:hover {
     font-weight: 600;
     margin-bottom: 20px;
    
+}
+
+/** HOME PAGE */
+
+.home-body {
+    color: white;
+    background: hsl(224, 32%, 12%);
+    background-image: conic-gradient(
+        from 0deg at 50% 50%,
+        var(--login-5),
+        var(--login-4),
+        var(--login-4),
+        var(--login-5)
+    );
+    background-blend-mode: multiply;
+    min-block-size: 100dvh;
+    display: grid;
+    place-items: center;
+}
+
+pre {
+    --selector: var(--textcolor-1);
+    --property: var(--textcolor-2);
+    --punctuation: var(--textcolor-3);
+
+    font-size: 3rem;
+    font-weight: bold;
+    background: hsl(222, 45%, 7%);
+    padding: 2rem;
+    border-radius: 1rem;
+
+    transform:
+    perspective(5000px)
+    rotateY(20deg)
+    rotateX(20deg)
+}
+
+.selector {
+    color: var(--selector);
+}
+
+.property {
+    color: var(--property);
+}
+
+.punctuation {
+    color: var(--punctuation);
+}
+
+.property + .punctuation {
+    color: var(--property);
+}
+
+pre > * {
+    text-shadow: 0 0 0.3rem currentColor;
 }
