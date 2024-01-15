@@ -14,7 +14,24 @@
       </code><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
       
       </code><div class="open_grepper_editor" title="Edit &amp; Save To Grepper"></div></pre>
+<script>
+  const pre = document.querySelector("pre");
 
+  document.addEventListener("mousemove", (e) => {
+    rotateElement(e, pre)
+  })
+
+  function rotateElement(event, element) {
+    // get mouse position
+    const x = event.clientX;
+    const y = event.clientY
+    // console.log(x, y)
+
+    // find the center - cuts window in half on both axis giving us the middle/center
+    const middleX = window.innerWidth / 2;
+    const middleY = window.innerHeight / 2;
+  }
+</script>
       <div>
         <a href="/user/signup"><button>Signup</button></a>
         <a href="/user/login"><button>Login</button></a>

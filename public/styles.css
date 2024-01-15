@@ -610,11 +610,13 @@ pre {
     background: hsl(222, 45%, 7%);
     padding: 2rem;
     border-radius: 1rem;
+    position: relative;
 
+    transform-style: preserve-3d;
     transform:
     perspective(5000px)
-    rotateY(20deg)
-    rotateX(20deg)
+    rotateY(var(--rotateY))
+    rotateX(var(--rotateX));
 }
 
 .selector {
@@ -635,4 +637,24 @@ pre {
 
 pre > * {
     text-shadow: 0 0 0.3rem currentColor;
+}
+
+pre::before, pre::after {
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+}
+
+pre::before {
+    inset: 0.75rem;
+    background-color: #08090a;
+    transform: translateZ(-49px);
+    filter: blur(15px);
+    opacity: 0.5;
+}
+
+pre::after {
+    inset: -1rem;
+    background: linear-gradient(-45deg, var(--login-3), var(--login-5));
+    transform: translateZ(-50px);
 }
