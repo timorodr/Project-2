@@ -5,7 +5,7 @@
   <body class="home-body">
     <div class="home-container">
 
-      <pre class="language-javascript" tabindex="0" style="position: relative;"><code class="language-css"><span class="token selector">.Welcome</span> <span class="token punctuation">{</span>
+      <pre contenteditable class="language-javascript" tabindex="0" style="position: relative;"><code class="language-css"><span class="token selector">.Welcome</span> <span class="token punctuation">{</span>
   <span class="token property">to-Tattooly</span><span class="token punctuation">:</span> the one<span class="token punctuation">;</span>
   <span class="token property">stop-shop</span><span class="token punctuation">:</span> for all<span class="token punctuation">;</span>
   <span class="token property">your-tattoo</span><span class="token punctuation">:</span> planning needs<span class="token punctuation">;</span>
@@ -30,6 +30,14 @@
     // find the center - cuts window in half on both axis giving us the middle/center
     const middleX = window.innerWidth / 2;
     const middleY = window.innerHeight / 2;
+
+    // how far away our mouse is from the middle (OFFSET ... MIGOS)
+    const offsetX = ((x - middleX) / middleX) * 45 // to be able to get it as a percentage essentially from 0 - 1 then limiting to a certain deg (45)
+    const offsetY = ((y - middleY) / middleY) * 45
+    console.log(offsetX, offsetY)
+
+    element.style.setProperty("--rotateX", -1 * offsetY + "deg") // axis' in CSS rotate around as if axis were a pole - a bit strange/confusing -1 * makes number opposite of what it actually is
+    element.style.setProperty("--rotateY", offsetX + "deg")
   }
 </script>
       <div>
