@@ -22,6 +22,9 @@ const tattooSchema = new Schema({
     },
     budget: {
         type: String
+    }, 
+    profilePhoto: {
+        type: String
     }
 })
 

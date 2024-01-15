@@ -45,9 +45,9 @@
                     <button onclick="the_thing2.showModal()" class="budget-btn">Edit Budget</button>
                     <dialog id="the_thing2">
                         <form id="update-budget" method="post">
-                            <label for="newBudget">Add to Budget:</label>
+                            <label for="newBudget">Tattoo Budget:</label>
                             <input type="text" id="newBudget" name="budget" value="$" required>
-                            <button type="button" onclick="updateBudget(); the_thing2.close();" value="Update Budget">Update Budget</button>
+                            <button type="button" onclick="updateBudget(); the_thing2.close();" value="Update Budget" class="update-budget-btn">Update Budget</button>
                         </form>
                         <script>
                             function updateBudget() {
