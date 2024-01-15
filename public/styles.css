@@ -11,6 +11,12 @@
     --clr-3: #04471c;
     --clr-4: #058c42;
     --clr-5: #16db65;
+
+    --login-1: #FFBE0B;
+    --login-2: #FB5607;
+    --login-3: #FF006E;
+    --login-4: #8338EC;
+    --login-5: #3A86FF;
 }
 
 * {
@@ -116,7 +122,7 @@ aside {
     }
 }
 
-.add-btn:hover, .update-budget-btn:hover, .signup-btn:hover {
+.add-btn:hover, .update-budget-btn:hover, .signup-btn:hover, .login-btn:hover {
     /* background: linear-gradient(180deg, blue, red); */
     transform: scale(1.1);
 
@@ -403,7 +409,7 @@ input[type="submit"]:hover {
 
 /** SIGNUP PAGE*/
 
-.signup-body {
+.signup-body, .login-body {
     display: flex;
     /* margin-left: 30%; */
     justify-content: center;
@@ -418,15 +424,15 @@ input[type="submit"]:hover {
 }
 
 
-.signup-container {
+.signup-container, .login-container {
     width: 420px;
     background: transparent;
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
     border: 2px solid rgba(255, 255, 255, .2);
-    backdrop-filter: blur(20px);
-    background-color:var(--clr-1);
+    /* backdrop-filter: blur(20px); */
+    background-color: #08090a;
     position: relative;
 }
 
@@ -434,7 +440,7 @@ input[type="submit"]:hover {
     content:"";
     position: absolute;
     inset: -.5rem;
-    background-color: black;
+    background-color: #08090a;
     border-radius: inherit;
     z-index: -1;
     background: conic-gradient(
@@ -486,6 +492,78 @@ input[type="submit"]:hover {
 }
 
 .signup-container .signup-btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+   
+}
+
+/** LOGIN PAGE */
+
+.login-container::before, .login-container::after {
+    content:"";
+    position: absolute;
+    inset: -.5rem;
+    background-color: #08090a;
+    border-radius: inherit;
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--login-2),
+        var(--login-3),
+        var(--login-5),
+        var(--login-3),
+        var(--login-2));
+        animation: rotation 12s linear infinite;
+}
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
+.login-container::after {
+    filter: blur(3.5rem);
+}
+
+.login-container .login-h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.login-container .login-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.login-input input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px
+}
+
+.login-input input::placeholder {
+    color:#fff
+}
+
+.login-container .login-btn {
     width: 100%;
     height: 45px;
     background-color: #fff;

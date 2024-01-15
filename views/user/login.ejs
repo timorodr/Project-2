@@ -2,25 +2,20 @@
 <html lang="en">
   <%- include("../partials/head.ejs") %>
 
-  <body>
-    <main>
-      <div>
+  <body class="login-body">
+  
+      <div class="login-container">
         <form action="/user/login" method="post">
-          <fieldset>
-            <legend>User Login</legend>
-            <label
-              >USERNAME: <input type="text" name="username" required />
-            </label>
-            <label
-              >PASSWORD: <input type="password" name="password" required />
-            </label>
-            <!-- <label
-              >Profile Pic: <input type="test" name="profilePicture" required />
-            </label> -->
-            <input type="submit" value="Login" />
-          </fieldset>
+            <h1 class="login-h1">User Login</h1>
+              <div class="login-input">
+                <input type="text" name="username" required placeholder="Username" />
+              </div>
+              <div class="login-input">
+                <input type="password" name="password" required placeholder="Password"/>
+              </div>
+            <input type="submit" value="Login" class="login-btn"/>
         </form>
       </div>
-    </main>
+    
   </body>
 </html>
