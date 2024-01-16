@@ -91,7 +91,7 @@ aside {
 
 }
 
-.add-btn{
+#add-btn{
     display: flex;
     justify-content: end;
     margin-top: 1rem;
@@ -126,7 +126,7 @@ aside {
     }
 }
 
-.add-btn:hover, .update-budget-btn:hover, .signup-btn:hover, .login-btn:hover {
+#add-btn:hover, .update-budget-btn:hover, .signup-btn:hover, .login-btn:hover {
     /* background: linear-gradient(180deg, blue, red); */
     transform: scale(1.1);
 

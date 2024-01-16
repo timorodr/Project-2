@@ -33,9 +33,10 @@ router.get("/", async (req, res) => {
         console.log(username)
         const tattoos = await Tattoo.find({ username })
 
+
         // const budget = req.session.budget
 
-        res.render("tattoos/index.ejs", {tattoos})
+        res.render("tattoos/index.ejs", {tattoos, username})
 
     } catch(error) {
 
@@ -45,10 +46,14 @@ router.get("/", async (req, res) => {
 
 
 
-//** NEW ROUTE */
+//** NEW ROUTES */
 
 router.get("/new", (req, res) => {
     res.render("tattoos/new.ejs")
+})
+
+router.get("/newsettings", (req, res) => {
+    res.render("tattoos/newsettings.ejs")
 })
 
 
@@ -68,6 +73,21 @@ router.post("/", async (req, res) => {
         res.status(400).send(error.message)
     }
 })
+
+// router.post("/", async (req, res) => {
+//     try {
+
+//         req.body.username = req.session.username
+
+//         await Tattoo.create(req.body)
+
+//         res.redirect("/tattooly")
+
+//     } catch(error) {
+
+//         res.status(400).send(error.message)
+//     }
+// })
 
 //** EDIT ROUTE */
 

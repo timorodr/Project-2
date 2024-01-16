@@ -16,7 +16,7 @@
                 <h1 id="appt-day"></h1>
             </div>
                 <div>
-                    <a href="/tattooly/new"><button class="add-btn">+ Add a Tattoo</button></a>
+                    <a href="/tattooly/new"><button id="add-btn">+ Add a Tattoo</button></a>
                 </div>
         </header>
 
@@ -26,11 +26,15 @@
             </div>
 
             <div class="profile">
+                
+                <!-- let tattoo = true -->
+                <% if(username) { %>
                 <div class="profile-photo">
-                    <img src="https://media.licdn.com/dms/image/C5603AQEi7gUPi-Pu8w/profile-displayphoto-shrink_400_400/0/1652236717319?e=2147483647&v=beta&t=LUJF53pNIiKDSDrS_hq6T3GdjTMlen8HHQz4DpRHjsE" alt="tim">
-                    <p>Tim Rodriguez</p>
-                    <p>@NANERO</p>
+                    <img src="<%=tattoo.profilePhoto%>" alt="tim">
+                    <p><%= tattoo.name%></p>
+                    <p>@<%=tattoo.userHandle%></p>
                 </div>
+                <% } %>
             </div>
             <div class="profile-menu">
                 <div class="profile-artists">Artists</div>
@@ -71,7 +75,7 @@
                         <!-- <button onclick="the_thing2.close()">Put that thing back or so help me God</button> -->
                     </dialog>
                 </div>
-                <div class="profile-settings">Settings</div>
+                <a href="/tattooly/newsettings"><button id="settings-btn">Settings</button></a>
                 <div class="profile-logout"><a href="/user/logout"><button>Logout</button></a></div>
             </div>
         </aside>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/head.ejs") %>
+
+  <body class="new-body">
+    <!-- <img src="https://i.gifer.com/PsxK.gif" alt="tattoo-bg" class="form-bg"> -->
+
+    
+      <div class="form-container">
+          <form action="/tattooly" method="post">
+            <h1 class="new-h1">Update Profile</h1>
+            <div class="input-box">
+              <input type="text" name="name" placeholder="Whats your name g?"/>
+              <!-- <i class='bx bxs-image-add'></i> -->
+            </div>
+            <div class="input-box">
+              <input type="text" name="userHandle" placeholder="Whats your handle G?"/>
+              <!-- <i class='bx bxs-comment-add'></i> -->
+            </div>
+            <div class="input-box">
+                <input type="text" name="profilePhoto" placeholder="what do you look like fr?"/>
+                <!-- <i class='bx bxs-comment-add'></i> -->
+              </div>
+            <input type="submit" value="Update" class="profile-update-btn"/>
+          </form>
+      </div>
+  
+  </body>
+</html>

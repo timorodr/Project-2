@@ -8,16 +8,22 @@ const { Schema, model } = mongoose
 const tattooSchema = new Schema({
     image: {
        type: String,
-       required: true
+    //    required: true
     },
     description: {
         type: String
     },
-    uploadDate: {
-        type: Date,
-        default: Date.now
-    },
+    // uploadDate: {
+    //     type: Date,
+    //     default: Date.now
+    // },
     username: {
+        type: String
+    },
+    name: {
+        type: String
+    },
+    userHandle: {
         type: String
     },
     budget: {
