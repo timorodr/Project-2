@@ -194,14 +194,15 @@ a {
 }
 
 .logo{
-   mix-blend-mode: color-burn;
-   height: 100px;
-   width: 200px;
+   /* mix-blend-mode: color-burn; */
+   height: 10rem;
+   width: 15rem;
    margin: auto;
 }
 
 .app-name {
     /* background-color: #f0f0f0; */
+    display: flex;
     padding: 20px;
     text-align: left;
 }

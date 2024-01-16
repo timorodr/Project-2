@@ -25,6 +25,9 @@ const tattooSchema = new Schema({
     }, 
     profilePhoto: {
         type: String
+    },
+    calendar: {
+        type: Date
     }
 })
 
