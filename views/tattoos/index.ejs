@@ -8,12 +8,26 @@
         <header class="budget-cal-add">
             <div id="budget">
                 <h2 class="budget-appt">Budget</h2>
-                <h1 id="budget-dollars"><%=tattoo.budget%></h1> <!-- fix this-->
+                <h1 id="budget-dollars">
+                    <% if(profile) { %>
+                       
+                     
+                        <p>$<%= user.budget%></p>
+                        
+                        <% } %>
+                </h1>
             </form>
             </div>    
             <div id="appointment">
                 <h2 class="budget-appt">Next Appointment</h2>
-                <h1 id="appt-day"><%=tattoo.calendar%></h1>
+                <h1 id="appt-day">
+                    <% if(profile) { %>
+                       
+                     
+                        <p><%= user.appointment%></p>
+                        
+                        <% } %>
+                </h1>
             </div>
                 <div>
                     <a href="/tattooly/new"><button id="add-btn">+ Add a Tattoo</button></a>

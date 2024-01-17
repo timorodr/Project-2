@@ -4,6 +4,7 @@ const express = require("express")
 const User = require("../models/user.js")
 const bcrypt = require("bcrypt")
 const Profile = require("../models/profile.js")
+const Tattoo = require("../models/Tattoo.js")
 
 //** CREATE ROUTER */
 const router = express.Router()

@@ -24,6 +24,7 @@ router.use((req, res, next) => {
 
 
 
+
 //** INDEX ROUTE */ 
 // NEED TO GET IMAGES SHOWING ON INDEX PAGE
 
