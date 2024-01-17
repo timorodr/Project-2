@@ -7,13 +7,13 @@
     <div id="container">
         <header class="budget-cal-add">
             <div id="budget">
-                <h2>Budget</h2>
-                <h1 id="budget-dollars">$</h1> <!-- fix this-->
+                <h2 class="budget-appt">Budget</h2>
+                <h1 id="budget-dollars"><%=tattoo.budget%></h1> <!-- fix this-->
             </form>
             </div>    
             <div id="appointment">
-                <h2>Next Appointment</h2>
-                <h1 id="appt-day"></h1>
+                <h2 class="budget-appt">Next Appointment</h2>
+                <h1 id="appt-day"><%=tattoo.calendar%></h1>
             </div>
                 <div>
                     <a href="/tattooly/new"><button id="add-btn">+ Add a Tattoo</button></a>
@@ -26,15 +26,15 @@
             </div>
 
             <div class="profile">
-                
-                <!-- let tattoo = true -->
-                <% if(username) { %>
-                <div class="profile-photo">
-                    <img src="<%=tattoo.profilePhoto%>" alt="tim">
-                    <p><%= tattoo.name%></p>
-                    <p>@<%=tattoo.userHandle%></p>
-                </div>
-                <% } %>
+               
+                    <% if(profile) { %>
+                    <div class="profile-photo">
+                    <img src="<%=user.profilePicture%>" alt="tim">
+                    <p><%= user.username%></p>
+                    <p>@<%=user.displayName%></p>
+                    </div>
+                    <% } %>
+            
             </div>
             <div class="profile-menu">
                 <div class="profile-artists">Artists</div>
@@ -75,7 +75,7 @@
                         <!-- <button onclick="the_thing2.close()">Put that thing back or so help me God</button> -->
                     </dialog>
                 </div>
-                <a href="/tattooly/newsettings"><button id="settings-btn">Settings</button></a>
+                <a href="/user/<%= user._id %>/edit"><button id="settings-btn">Settings</button></a>
                 <div class="profile-logout"><a href="/user/logout"><button>Logout</button></a></div>
             </div>
         </aside>

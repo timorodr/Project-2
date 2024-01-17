@@ -31,17 +31,18 @@ router.get("/", async (req, res) => {
     try {
 
         const username = req.session.username
-
-        const tattoos = await Tattoo.find({ username })
+        
+        // const tattoos = await Tattoo.find({ username })
         const profile = await Profile.find({ username })
-        const user = await User.findOne({ username })
-       
+        // const user = await User.findOne({ username })
+        // const usersTattoo = await Tattoo.find({ username })
         
         
+        console.log(username)
         // console.log(tattoos)
      
 
-        res.render("tattoos/index.ejs", {tattoos, username, profile, user})
+        res.render("profile/index.ejs", { username, profile})
 
     } catch(error) {
 
@@ -54,12 +55,12 @@ router.get("/", async (req, res) => {
 //** NEW ROUTES */
 
 router.get("/new", (req, res) => {
-    res.render("tattoos/new.ejs")
+    res.render("profile/new.ejs")
 })
 
-router.get("/newsettings", (req, res) => {
-    res.render("tattoos/newsettings.ejs")
-})
+// router.get("/newsettings", (req, res) => {
+//     res.render("tattoos/newsettings.ejs")
+// })
 
 
 //** CREATE ROUTE */
@@ -69,8 +70,8 @@ router.post("/", async (req, res) => {
 
         req.body.username = req.session.username
 
-        await Tattoo.create(req.body)
-
+        await Profile.create(req.body)
+        
         res.redirect("/tattooly")
 
     } catch(error) {
@@ -101,9 +102,9 @@ router.get("/:id/edit", async (req, res) => {
 
         const id = req.params.id
 
-        const tattoo = await Tattoo.findById(id)
+        const profile = await Profile.findById(id)
 
-        res.render("tattoos/edit.ejs", { tattoo })
+        res.render("profile/edit.ejs", { profile })
         
     } catch(error) {
 
@@ -119,9 +120,9 @@ router.put("/:id", async (req, res) => {
     try {
         const id = req.params.id
 
-        await Tattoo.findByIdAndUpdate(id, req.body)
+        await Profile.findByIdAndUpdate(id, req.body)
 
-        res.redirect(`/tattooly/${id}`) // this sends back to show - can change to index if better UX
+        res.redirect(`/profile/${id}`) // this sends back to show - can change to index if better UX
 
     }  catch(error) {
 
@@ -135,7 +136,7 @@ router.delete("/:id", async(req, res) => {
     try {
         const id = req.params.id
 
-        await Tattoo.findByIdAndDelete(id)
+        await Profile.findByIdAndDelete(id)
 
         res.redirect("/tattooly")
 
@@ -152,9 +153,9 @@ router.get("/:id", async (req , res) => {
 
         const id = req.params.id
 
-        const tattoo = await Tattoo.findById(id)
+        const profile = await Profile.findById(id)
 
-        res.render("tattoos/show.ejs", {tattoo})
+        res.render("profile/show.ejs", {profile})
 
     } catch(error) {
 

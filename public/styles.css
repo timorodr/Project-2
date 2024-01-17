@@ -37,6 +37,7 @@ body {
     margin: 0;
     padding: 0;
     color: #f4f7f5;
+    background-color: #08090a;
 }
 
 /* "profile profile budget budget calendar calendar add-post add-post"
@@ -107,12 +108,18 @@ aside {
     transform: scale(1);
     background-size: 300% 300%;
 }
+
+
 .update-budget-btn {
     background: linear-gradient(45deg, #FF006E, #8338EC, #3A86FF);
     border: none;
     border-radius: 6px;
     padding: 4px;
     color: #f4f7f5;
+}
+
+#budget-dollars, #appt-day {
+    color: var(--clr-5);
 }
 @keyframes color {
     0% {
@@ -267,7 +274,7 @@ a {
     align-items: center;
     min-height: 100vh; 
     /* background-color: #e3d5ca; */
-    background-color: #222823;
+    background-color: #08090a;
     background-image: url("https://png.pngtree.com/png-vector/20190929/ourmid/pngtree-add-icon-isolated-on-abstract-background-png-image_1752337.jpg");
     background-repeat: none;
     /* background-size: cover; */
@@ -374,6 +381,7 @@ input[type="submit"]:hover {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -383,12 +391,18 @@ input[type="submit"]:hover {
     column-gap: 20px;
     background-color: #222823;
     /* background-color: #d5bdaf; */
+    background-image: url("https://www.shutterstock.com/image-photo/three-mockup-white-blank-museum-600nw-2018518967.jpg");
+    /* background-repeat: none; */
+    background-position: center;
+    background-size: cover;
     height: 100dvh;
 }
 
 .show-container .show-frame {
     width: 100%;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    height: 60dvh;
+   
 }
 
 .show-container .show-frame img {

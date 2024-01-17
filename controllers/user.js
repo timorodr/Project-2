@@ -3,6 +3,7 @@
 const express = require("express")
 const User = require("../models/user.js")
 const bcrypt = require("bcrypt")
+const Profile = require("../models/profile.js")
 
 //** CREATE ROUTER */
 const router = express.Router()
@@ -22,7 +23,8 @@ router.post("/signup", async (req, res) => {
         )
 
         await User.create(req.body)
-
+        
+        
         res.redirect("/user/login")
 
         } catch (error) {
@@ -30,6 +32,7 @@ router.post("/signup", async (req, res) => {
         res.status(400).send(error.message);
 
         }
+        
 })
 
 router.get("/login", (req, res) => {
@@ -38,7 +41,7 @@ router.get("/login", (req, res) => {
 
 router.post("/login", async (req, res) => {
     try {
-        const { username, password, profilePicture } = req.body
+        const { username, password } = req.body
         const user = await User.findOne({ username })
 
         if(!user) {
@@ -62,6 +65,40 @@ router.post("/login", async (req, res) => {
         res.status(400).send(error.message);
         }
     
+})
+
+
+//** EDIT ROUTE */
+
+router.get("/:id/edit", async (req, res) => {
+    try {
+
+        const id = req.params.id
+
+        const user = await User.findById(id)
+
+        res.render("user/edit.ejs", { user })
+        
+    } catch(error) {
+
+        res.status(400).send(error.message)
+    }
+
+})
+//** UPDATE ROUTE */
+
+router.put("/:id", async (req, res) => {
+    try {
+        const id = req.params.id
+
+        await User.findByIdAndUpdate(id, req.body)
+
+        res.redirect("/tattooly") // this sends back to show - can change to index if better UX
+
+    }  catch(error) {
+
+        res.status(400).send(error.message)
+    }
 })
 
 router.get("/logout", (req, res) => {

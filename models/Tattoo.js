@@ -23,15 +23,15 @@ const tattooSchema = new Schema({
     name: {
         type: String
     },
-    userHandle: {
-        type: String
-    },
+    // userHandle: {
+    //     type: String
+    // },
     budget: {
         type: String
     }, 
-    profilePhoto: {
-        type: String
-    },
+    // profilePhoto: {
+    //     type: String
+    // },
     calendar: {
         type: Date
     }

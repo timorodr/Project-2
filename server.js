@@ -8,6 +8,8 @@ const TattooRouter = require("./controllers/tattoo.js")
 const UserRouter = require("./controllers/user.js")
 const session = require("express-session")
 const MongoStore = require("connect-mongo")
+const ProfileRouter = require("./controllers/profile.js")
+const Profile = require("./models/profile.js")
 
 
 //** CREATE APP OBJECT */
@@ -36,6 +38,7 @@ app.use(session({
 }))
 app.use("/tattooly", TattooRouter)
 app.use("/user", UserRouter)
+app.use("/profile", ProfileRouter)
 
 
 //** SERVER LISTENER */

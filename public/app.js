@@ -66,3 +66,15 @@
 // // Append the form to the container
 // document.getElementById('formContainer').appendChild(form);
 // }
+
+
+
+
+// <!-- let tattoo = true -->
+// <!-- <% if(username) { %>
+// <div class="profile-photo">
+//     <img src="<%=tattoo.profilePhoto%>" alt="tim">
+//     <p><%= tattoo.name%></p>
+//     <p>@<%=tattoo.userHandle%></p>
+// </div> -->
+// <!-- <% } %> -->
