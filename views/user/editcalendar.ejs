@@ -2,7 +2,7 @@
 <html lang="en">
   <%- include("../partials/head.ejs") %>
 
-  <body class="new-body">
+  <body class="user-body">
 
     
       <div class="form-container">
@@ -10,10 +10,12 @@
             <h1 class="new-h1">Edit Calendar</h1>
            
             <div class="input-box">
-              <input type="text" name="appointment" placeholder="$ Amount"/>
+              <input type="date" name="appointment" placeholder="Next Appt Date"/>
             </div>
            
             <input type="submit" value="Update" class="profile-update-btn"/>
+
+            <button type="button" onclick="the_thing.close();" value="Update Calendar" class="update-calendar-btn">Back</button>
           </form>
       </div>
   
