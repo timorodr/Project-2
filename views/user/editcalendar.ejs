@@ -7,14 +7,12 @@
     
       <div class="form-container">
         <form action="/user/<%= user._id %>?_method=PUT" method="post">
-            <h1 class="new-h1">Update Profile</h1>
+            <h1 class="new-h1">Edit Calendar</h1>
            
             <div class="input-box">
-              <input type="text" name="displayName" placeholder="Whats your handle G?"/>
+              <input type="text" name="appointment" placeholder="$ Amount"/>
             </div>
-            <div class="input-box">
-                <input type="text" name="profilePicture" placeholder="what do you look like fr?"/>
-            </div>
+           
             <input type="submit" value="Update" class="profile-update-btn"/>
           </form>
       </div>

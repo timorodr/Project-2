@@ -86,6 +86,42 @@ router.get("/:id/edit", async (req, res) => {
     }
 
 })
+
+//** EDIT CALENDAR ROUTE */
+
+router.get("/:id/editcalendar", async (req, res) => {
+    try {
+
+        const id = req.params.id
+
+        const user = await User.findById(id)
+
+        res.render("user/editcalendar.ejs", { user })
+        
+    } catch(error) {
+
+        res.status(400).send(error.message)
+    }
+
+})
+
+//** EDIT BUDGET ROUTE */
+
+router.get("/:id/editbudget", async (req, res) => {
+    try {
+
+        const id = req.params.id
+
+        const user = await User.findById(id)
+
+        res.render("user/editbudget.ejs", { user })
+        
+    } catch(error) {
+
+        res.status(400).send(error.message)
+    }
+
+})
 //** UPDATE ROUTE */
 
 router.put("/:id", async (req, res) => {

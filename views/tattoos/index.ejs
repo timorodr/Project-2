@@ -55,37 +55,39 @@
                 <div class="profile-calendar">
                     <button onclick="the_thing.showModal()" class="calendar-btn">Edit Calendar</button>
                     <dialog id="the_thing">
-                        <form id="update-calendar" method="post">
+                        <%- include("../user/editcalendar.ejs") %>
+                        <!-- <form id="update-calendar" method="post">
                             <label for="newCalendar">Appointment Date:</label>
                             <input type="date" id="newCalendar" name="calendar" required>
-                            <button type="button" onclick="updateCalendar();" value="Update Calendar" class="update-calendar-btn">Update Calendar</button>
-                        </form>
-                        <script>
+                        </form> -->
+                        <button type="button" onclick="the_thing.close();" value="Update Calendar" class="update-calendar-btn">Update Calendar</button>
+                        <!-- <script> place button inside form 
                             function updateCalendar() {
                                 let newAppt = document.getElementById("newCalendar").value
                                 document.getElementById("appt-day").innerText = newAppt
                                 the_thing.close()
                             }
                            
-                        </script>
+                        </script> -->
                     </dialog>
                 </div>
                 <div class="profile-budget">
                     <button onclick="the_thing2.showModal()" class="budget-btn">Edit Budget</button>
                     <dialog id="the_thing2">
-                        <form id="update-budget" method="post">
+                        <%- include("../user/editbudget.ejs") %>
+                        <!-- <form id="update-budget" method="post">
                             <label for="newBudget">Tattoo Budget:</label>
                             <input type="text" id="newBudget" name="budget" value="$" required>
-                            <button type="button" onclick="updateBudget();" value="Update Budget" class="update-budget-btn">Update Budget</button>
-                        </form>
-                        <script>
+                        </form> -->
+                        <button type="button" onclick="the_thing2.close();" value="Update Budget" class="update-budget-btn">Update Budget</button>
+                        <!-- <script>
                             function updateBudget() {
                                 let newBudget = document.getElementById("newBudget").value
                                 document.getElementById("budget-dollars").innerText = newBudget
                                 the_thing2.close()
                             }
                            
-                        </script>
+                        </script> -->
                         <!-- <button onclick="the_thing2.close()">Put that thing back or so help me God</button> -->
                     </dialog>
                 </div>
