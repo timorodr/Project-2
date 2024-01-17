@@ -601,6 +601,10 @@ input[type="submit"]:hover {
 /** HOME PAGE */
 
 .home-body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
     color: white;
     background: hsl(224, 32%, 12%);
     background-image: conic-gradient(
@@ -673,4 +677,72 @@ pre::after {
     inset: -1rem;
     background: linear-gradient(-45deg, var(--login-3), var(--login-5));
     transform: translateZ(-50px);
+}
+
+.home-btns {
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.home-btns #home-signup-btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    /* margin-bottom: 20px; */
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+
+.home-btns #home-login-btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    /* margin-bottom: 20px; */
+    padding-left: 5.34rem;
+    padding-right: 5.34rem;
+}
+
+#home-login-btn:hover {
+    color: white;
+    box-shadow: 0 0 20px var(--clr-5);
+    background-color: var(--clr-5);
+    cursor: pointer;
+  }
+
+  #home-signup-btn:hover {
+    cursor: pointer;
+  }
+
+
+/** USER */
+.user-body {
+    display: flex;
+    /* margin-left: 30%; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    /* background-color: #e3d5ca; */
+    background-color: #08090a;
+    background-image: url("https://i.redd.it/i-got-bored-so-i-decided-to-draw-a-random-image-on-the-v0-4ig97vv85vjb1.png?width=1280&format=png&auto=webp&s=7177756d1f393b6e093596d06e1ba539f723264b");
+    background-repeat: none;
+    /* background-size: cover; */
+    background-position: center;
 }
