@@ -56,38 +56,14 @@
                     <button onclick="the_thing.showModal()" class="calendar-btn">Edit Calendar</button>
                     <dialog id="the_thing">
                         <%- include("../user/editcalendar.ejs") %>
-                        <!-- <form id="update-calendar" method="post">
-                            <label for="newCalendar">Appointment Date:</label>
-                            <input type="date" id="newCalendar" name="calendar" required>
-                        </form> -->
-                        
-                        <!-- <script> place button inside form 
-                            function updateCalendar() {
-                                let newAppt = document.getElementById("newCalendar").value
-                                document.getElementById("appt-day").innerText = newAppt
-                                the_thing.close()
-                            }
-                           
-                        </script> -->
+              
                     </dialog>
                 </div>
                 <div class="profile-budget">
                     <button onclick="the_thing2.showModal()" class="budget-btn">Edit Budget</button>
                     <dialog id="the_thing2">
                         <%- include("../user/editbudget.ejs") %>
-                        <!-- <form id="update-budget" method="post">
-                            <label for="newBudget">Tattoo Budget:</label>
-                            <input type="text" id="newBudget" name="budget" value="$" required>
-                        </form> -->
-                        <!-- <script>
-                            function updateBudget() {
-                                let newBudget = document.getElementById("newBudget").value
-                                document.getElementById("budget-dollars").innerText = newBudget
-                                the_thing2.close()
-                            }
-                           
-                        </script> -->
-                        <!-- <button onclick="the_thing2.close()">Put that thing back or so help me God</button> -->
+                    
                     </dialog>
                 </div>
                 <a href="/user/<%= user._id %>/edit"><button id="settings-btn">Settings</button></a>
