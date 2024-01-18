@@ -5,15 +5,17 @@
   <body id="show-body">
    
       <div class="show-container">
-        <a href="/tattooly/"><button><i class='bx bx-arrow-back'></i>Back To Main</button></a>
+        <a href="/tattooly/"><button id="back-btn"><i class='bx bx-arrow-back'></i>Back To Main</button></a>
         <article class="show-frame">
           <img src="<%= tattoo.image %> " alt="tattoo photo">
           <h2 class="tattoo-description"><%= tattoo.description %></h2>
-          <h3 class="tattoo-date"><%= tattoo.uploadDate %></h3>
-          <a href="/tattooly/<%= tattoo._id %>/edit"><button>Edit</button></a>
-          <form action="/tattooly/<%= tattoo._id %>?_method=DELETE" method="POST">
-            <input type="submit" value="Delete"/>
-          </form>
+          
+          <div class="edit-and-delete">
+            <a href="/tattooly/<%= tattoo._id %>/edit"><button id="show-edit-btn">Edit</button></a>
+            <form action="/tattooly/<%= tattoo._id %>?_method=DELETE" method="POST">
+              <input type="submit" value="Delete" id="delete-btn"/>
+            </form>
+          </div>
         </article>
 
       </div>
