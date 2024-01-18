@@ -21,6 +21,8 @@
     --textcolor-1: hsl(338, 70%, 55%);
     --textcolor-2: hsl(183, 70%, 62%);
     --textcolor-3: hsl(334, 7%, 95%);
+
+    --fontcolor-white: #f4f7f5;
 }
 
 *, *::before, *::after {
@@ -67,7 +69,7 @@ header {
     /* background-color: #f5ebe0; */
     background-color: #08090a;
     box-shadow: 2px 2px 2px 1px #575a5e; 
-    color: #f4f7f5;
+    color: var(--fontcolor-white);
 } 
 
 
@@ -100,7 +102,7 @@ aside {
     padding: .7em;
     border: none;
     border-radius: 6px;
-    color: #f4f7f5;
+    color: var(--fontcolor-white);
     cursor: grab;
     animation: color 13s ease-in-out infinite;
     font-weight: 500;
@@ -115,7 +117,7 @@ aside {
     border: none;
     border-radius: 6px;
     padding: 4px;
-    color: #f4f7f5;
+    color: var(--fontcolor-white);
 }
 
 #budget-dollars, #appt-day {
@@ -141,7 +143,7 @@ aside {
 
 a {
     text-decoration: none;
-    color: #f4f7f5;
+    color: var(--fontcolor-white);
 }
 
 #the_thing, #the_thing2 {
@@ -235,26 +237,48 @@ a {
     margin-top: 10px;
 }
 
+
+#username {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--fontcolor-white)
+}
+#displayName {
+    color: var(--fontcolor-white);
+    opacity: 0.4;
+}
+
 .profile-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px;
     justify-content: space-evenly;
-    height: 50dvh;
-    background-color: #575a5e;
+    height: 60dvh;
+    background-color: #08090a;
+    
 }
 
 .profile-artists {
-    background-color: #058c42;
-    padding: 16px;
+    text-align: center;
+    color: var(--fontcolor-white);
 }
-.calendar-btn, .budget-btn {
-    background-color: #575a5e;
+.calendar-btn, .budget-btn, #settings-btn, #logout-btn, .profile-artists {
+    background-color: #08090a;
     border: none;
     border-radius: 6px;
     padding: 15px;
     width: 100%;
+    color: var(--fontcolor-white);
+}
+
+#logout-btn {
+    margin-top: 190px;
+}
+
+.calendar-btn:hover, .budget-btn:hover, #settings-btn:hover, #logout-btn:hover, .profile-artists:hover, #logout-btn:hover  {
+    color: var(--login-3);
+    transform: scale(1.3);
 }
 
 .budget-cal-add {
@@ -610,7 +634,7 @@ input[type="submit"]:hover {
     margin: 0;
     padding: 0;
 
-    color: white;
+    color: var(--fontcolor-white);
     background: #08090a;
     background-image: conic-gradient(
         from 0deg at 50% 50%,
@@ -726,7 +750,7 @@ pre::after {
 }
 
 #home-login-btn:hover {
-    color: white;
+    color: var(--fontcolor-white);
     box-shadow: 0 0 20px var(--clr-5);
     background-color: var(--clr-5);
     cursor: pointer;

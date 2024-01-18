@@ -44,8 +44,8 @@
                     <% if(profile) { %>
                     <div class="profile-photo">
                     <img src="<%=user.profilePicture%>" alt="tim">
-                    <p><%= user.username%></p>
-                    <p>@<%=user.displayName%></p>
+                    <p id="username"><%= user.username%></p>
+                    <p id="displayName">@<%=user.displayName%></p>
                     </div>
                     <% } %>
             
@@ -67,7 +67,7 @@
                     </dialog>
                 </div>
                 <a href="/user/<%= user._id %>/edit"><button id="settings-btn">Settings</button></a>
-                <div class="profile-logout"><a href="/user/logout"><button>Logout</button></a></div>
+                <div class="profile-logout"><a href="/user/logout"><button id="logout-btn">Logout</button></a></div>
             </div>
         </aside>
 
