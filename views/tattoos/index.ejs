@@ -35,40 +35,57 @@
         </header>
 
         <aside>
-            <div class="app-name">
-                <h1 class="logo">Tattooly</h1>
-            </div>
-
-            <div class="profile">
-               
-                    <% if(profile) { %>
-                    <div class="profile-photo">
-                    <img src="<%=user.profilePicture%>" alt="tim">
-                    <p id="username"><%= user.username%></p>
-                    <p id="displayName">@<%=user.displayName%></p>
-                    </div>
-                    <% } %>
-            
-            </div>
-            <div class="profile-menu">
-                <div class="profile-artists">Artists</div>
-                <div class="profile-calendar">
-                    <button onclick="the_thing.showModal()" class="calendar-btn">Edit Calendar</button>
-                    <dialog id="the_thing">
-                        <%- include("../user/editcalendar.ejs") %>
-              
-                    </dialog>
+            <nav>
+                <div class="app-name">
+                    <h1 class="logo">Tattooly</h1>
                 </div>
-                <div class="profile-budget">
-                    <button onclick="the_thing2.showModal()" class="budget-btn">Edit Budget</button>
-                    <dialog id="the_thing2">
-                        <%- include("../user/editbudget.ejs") %>
+                <div id="menu">
+                    <div class="profile">
                     
-                    </dialog>
+                            <% if(profile) { %>
+                            <div class="profile-photo">
+                            <img src="<%=user.profilePicture%>" alt="tim">
+                            <p id="username"><%= user.username%></p>
+                            <p id="displayName">@<%=user.displayName%></p>
+                            </div>
+                            <% } %>
+                    
+                    </div>
+                    <div class="profile-menu">
+                        <div class="profile-artists">Artists</div>
+                        <div class="profile-calendar">
+                            <button onclick="the_thing.showModal()" class="calendar-btn">Edit Calendar</button>
+                            <dialog id="the_thing">
+                                <%- include("../user/editcalendar.ejs") %>
+                    
+                            </dialog>
+                        </div>
+                        <div class="profile-budget">
+                            <button onclick="the_thing2.showModal()" class="budget-btn">Edit Budget</button>
+                            <dialog id="the_thing2">
+                                <%- include("../user/editbudget.ejs") %>
+                    
+                            </dialog>
+                        </div>
+                        <a href="/user/<%= user._id %>/edit"><button id="settings-btn">Settings</button></a>
+                        <div class="profile-logout"><a href="/user/logout"><button id="logout-btn">Logout</button></a></div>
+                    </div>
                 </div>
-                <a href="/user/<%= user._id %>/edit"><button id="settings-btn">Settings</button></a>
-                <div class="profile-logout"><a href="/user/logout"><button id="logout-btn">Logout</button></a></div>
-            </div>
+                <div id="hamburger">
+                    <label id="hamburger-label" for="hamburger-toggle">
+                    <div class="hamburger-line">
+                        <span class="material-symbols-outlined" id="home-icon">home</span>
+                        <span class="material-symbols-outlined">brush</span>
+                        <span class="material-symbols-outlined">edit_calendar</span>
+                        <span class="material-symbols-outlined">paid</span>
+                        <span class="material-symbols-outlined">settings</span>
+                        <span class="material-symbols-outlined">logout</span>
+                    </div>
+                    
+                    </label>
+                    <input type="checkbox" id="hamburger-toggle"/>
+                </div>
+            </nav>
         </aside>
 
         <section class="art-container">
