@@ -461,6 +461,11 @@ a {
     padding: 20px;
 }
 
+nav {
+    position: sticky;
+    top: 0
+}
+
 #budget {
     /* border: solid green 3px; */
     display: flex;
