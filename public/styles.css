@@ -287,25 +287,26 @@ aside {
     }
 
     .hamburger-line {
-        width: 900px;
-        border: 2px solid var(--fontcolor-white);
+        width: 100%;
+        /* border: 2px solid var(--fontcolor-white); */
         margin: 0px;
         /* margin-left: -10px; */
-        height: 50px;
+        height: 6dvh;
         background-color: var(--clr-1);
         color: var(--fontcolor-white);
         display: flex;
-        /* justify-content: space-between; */
+        justify-content: space-evenly;
         align-items: center;
      
     }
 
-    .hamburger-line > span {
+
+    /* .hamburger-line > span {
         padding-right: 52px;
-    }
-    #home-icon {
+    } */
+    /* #home-icon {
         padding-left: 7px;
-    }
+    } */
 }
 
 @media(min-width: 900px){
@@ -326,8 +327,9 @@ aside {
 
 
 #hamburger {
+    width: 100%;
     position: fixed;
-    bottom: 2px;
+    bottom: 0;
     left: 2px;
 }
 
