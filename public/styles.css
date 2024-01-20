@@ -293,6 +293,7 @@ aside {
         /* margin-left: -10px; */
         height: 6dvh;
         background-color: var(--clr-1);
+        border-top: 1px solid #ffffff2b;
         color: var(--fontcolor-white);
         display: flex;
         justify-content: space-evenly;
@@ -338,7 +339,7 @@ aside {
     cursor: pointer;
 }
 
-nav:has(#hamburger-toggle:checked) .profile-menu{
+#hamburger:has(#hamburger-toggle:checked) .profile-menu{
     left: 0;
 }
 
