@@ -3,19 +3,24 @@
   <%- include("../partials/head.ejs") %>
 
   <body class="user-body">
-
     
+
+    <div class="back">
+      <a href="/tattooly/" id="back-arrow"><button id="back-btn"><i class='bx bx-arrow-back'></i>Back To Main</button></a>
+    </div>
+
       <div class="form-container">
+       
         <form action="/user/<%= user._id %>?_method=PUT" method="post">
             <h1 class="new-h1">Update Profile</h1>
            
             <div class="input-box">
-              <input type="text" name="displayName" placeholder="Whats your handle G?"/>
+              <input type="text" name="displayName" placeholder="@User_Handle"/>
             </div>
             <div class="input-box">
-                <input type="text" name="profilePicture" placeholder="what do you look like fr?"/>
+                <input type="text" name="profilePicture" placeholder="Profile picture URL"/>
             </div>
-            <input type="submit" value="Update" class="profile-update-btn"/>
+            <input type="submit" value="Update" class="user-update-btn"/>
           </form>
       </div>
   
