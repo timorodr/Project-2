@@ -644,7 +644,7 @@ a {
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
-    background-color: #e3d5ca;
+    background-color: var(--clr-1);
     background-image: url("https://www.ed.ac.uk/sites/default/files/styles/panel_breakpoints_theme_uoe_mobile_1x/public/thumbnails/image/edit-900x400_0.jpg?itok=3k2bZKDK");
     background-repeat: none;
     /* background-size: cover; */
