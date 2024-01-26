@@ -42,7 +42,25 @@
 ## App Photos
 
 #### Landing page and user sign up/login
+
 ![App Photos](https://i.imgur.com/uxW6uyj.png)
+![App Photos](https://i.imgur.com/p2F0FdX.png)
+![App Photos](https://i.imgur.com/luyWKNY.png)
+
+#### Home page and app functionality
+
+![App Photos](https://i.imgur.com/UErtUn6.png)
+![App Photos](https://i.imgur.com/kfQdHea.png)
+![App Photos](https://i.imgur.com/NoNbbM5.png)
+![App Photos](https://i.imgur.com/ExdHLTT.png)
+![App Photos](https://i.imgur.com/hjdRIVZ.png)
+![App Photos](https://i.imgur.com/Qw7kIZM.png)
+![App Photos](https://i.imgur.com/zplBJPw.png)
+
+#### Mobile home page 
+
+![App Photos](https://i.imgur.com/2nxCYQN.png)
+
 
 
 ## Design Mockups (Desktop + Mobile)
