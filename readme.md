@@ -39,6 +39,12 @@
 | User Update | /user/:id | PUT | Updates user info from edit form|
 
 
+## App Photos
+
+#### Landing page and user sign up/login
+![App Photos](https://i.imgur.com/uxW6uyj.png)
+
+
 ## Design Mockups (Desktop + Mobile)
 
 ##### Mobile Design
