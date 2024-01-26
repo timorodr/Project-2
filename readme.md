@@ -2,7 +2,7 @@
 
 - **My Name: Timothy Rodriguez**
 - **App Name: Tattooly**
-- **Description: Tattooly is a tattoo planning app with the ability to upload links to images and save to a profile with a description provided by the user. Reference photos are a must when planning a future tattoo and this allows as a hub for all reference photos for future tattoos!**
+- **Description: Tattooly is a tattoo planning app allowing for profile customizability, session saving, and everything needed for your next tattoo appointment! Create an account and begin adding your favorite tattoo reference photos, editing your budget, and updating your calendar for your next appointment. Enjoy, and make this app your canvas!!**
 - **Github URL: (https://github.com/timorodr/Project-2)**
 - **Deployed Website: (https://project2-crud.onrender.com)**
 - **Trello Board: (https://trello.com/invite/b/YY0hXs2m/ATTI1a0be98bb1bfb0dadfb8e32cca847aa7A9AA61C0/project-2)**
@@ -11,7 +11,7 @@
 
 ##### Node Dependencies (package.json)
 
-- Express.js, morgan, method-override, express-session, bcrypt, connect-mongo, dotenv, ejs, mongoose
+- Express.js, morgan, method-override, express-session, bcrypt, connect-mongo, dotenv, ejs, mongoose, mongoDB
 
 ##### Frontend 
 
@@ -29,6 +29,14 @@
 | Tattoos Update | /tattooly/:id | PUT | Updates post from form|
 | Tattoos Delete | /tattooly/:id | DELETE | Deletes a post using speific ID|
 | Tattoos Show | /tattooly/:id | GET | Renders show page with post user clicked|
+| User Sign up | /user/signup | GET | Provides sign up form for the user|
+| User Create | /user/signup | POST | Creates new user|
+| User Login | /user/login | GET | Provides login form for user with active account|
+| User Login | /user/login | POST | Authenticates user and redirects to /tattooly|
+| User Edit | /user/:id/edit | GET | Renders edit form for user handle and profile picture|
+| User Edit | /user/:id/editcalendar | GET | Renders modal to edit user appointment calendar|
+| User Edit | /user/:id/editbudget | GET | Renders modal to edit user tattoo budget|
+| User Update | /user/:id | PUT | Updates user info from edit form|
 
 
 ## Design Mockups (Desktop + Mobile)
