@@ -44,7 +44,7 @@
 #### Landing page and user sign up/login
 
 ![App Photos](https://i.imgur.com/uxW6uyj.png)
-![App Photos](https://i.imgur.com/p2F0FdX.png)
+![App Photos](https://i.imgur.com/xLQDXdM.png)
 ![App Photos](https://i.imgur.com/luyWKNY.png)
 
 #### Home page and app functionality
