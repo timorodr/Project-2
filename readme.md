@@ -11,9 +11,9 @@
 
 ##### Node Dependencies (package.json)
 
-- express, morgan, method-override, express-session, bcrypt, connect-mongo, dotenv, ejs, mongoose
+- Express.js, morgan, method-override, express-session, bcrypt, connect-mongo, dotenv, ejs, mongoose
 
-##### Frontend (if used, ex. jquery, alpine, bootstrap, htmx, etc.)
+##### Frontend 
 
 - HTML, CSS, Javascript
 
