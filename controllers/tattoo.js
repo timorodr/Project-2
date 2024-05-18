@@ -35,12 +35,7 @@ router.get("/", async (req, res) => {
         const tattoos = await Tattoo.find({ username })
         const profile = await Profile.find({ username })
         const user = await User.findOne({ username })
-       
-        
-        
-        // console.log(tattoos)
-     
-
+    
         res.render("tattoos/index.ejs", {tattoos, username, profile, user})
 
     } catch(error) {
@@ -79,20 +74,6 @@ router.post("/", async (req, res) => {
     }
 })
 
-// router.post("/", async (req, res) => {
-//     try {
-
-//         req.body.username = req.session.username
-
-//         await Tattoo.create(req.body)
-
-//         res.redirect("/tattooly")
-
-//     } catch(error) {
-
-//         res.status(400).send(error.message)
-//     }
-// })
 
 //** EDIT ROUTE */
 

@@ -34,31 +34,3 @@ mongoose.connection.on("open", async (req, res) => {
 })
 
 // //** SEED */
-
-// mongoose.connection.on("open", async (req, res) => {
-
-//     try{
-//         // array of starter fruits
-//         const startProfiles = [
-//           { name: "Orange", budget: "orange", appointment: "today" },
-//           { name: "Grape", budget: "purple", appointment: "today" },
-//           { name: "Banana", budget: "orange", appointment: "today" },
-//           { name: "Strawberry", budget: "red", appointment: "today" },
-//           { name: "Coconut", budget: "brown", appointment: "today" },
-//           ]
-  
-//        // Delete all fruits
-//        await Profile.deleteMany({})
-    
-//        // Seed Starter Fruits
-//        const profiles = await Profile.create(startProfiles)
-    
-//        // send created fruits as response to confirm creation
-//        res.json(profiles);
-//     } catch(error) {
-//       console.log(error.message)
-//       res.status(400).send(error.message)
-//     }
-  
-  
-//   });

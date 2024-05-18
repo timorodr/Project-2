@@ -56,7 +56,6 @@ router.post("/login", async (req, res) => {
         }
 
         req.session.username = username
-        // req.session.profilePicture = profilePicture
         req.session.loggedIn = true
 
 

@@ -87,8 +87,6 @@ section {
 
 aside {
     grid-area: aside;
-    /* background-color: #d6ccc2; */
-    /* background-color: #a7a2a9; */
     background-color: #08090a;
     border-right: 1px solid #575a5e6a;
 
@@ -112,14 +110,6 @@ aside {
 }
 
 
-/* .update-budget-btn {
-    background: linear-gradient(45deg, #FF006E, #8338EC, #3A86FF);
-    border: none;
-    border-radius: 6px;
-    padding: 4px;
-    color: var(--fontcolor-white);
-} */
-
 #budget-dollars, #appt-day {
     color: var(--clr-5);
 }
@@ -136,7 +126,6 @@ aside {
 }
 
 #add-btn:hover, .update-budget-btn:hover, .signup-btn:hover, .login-btn:hover {
-    /* background: linear-gradient(180deg, blue, red); */
     transform: scale(1.1);
 
 }
@@ -154,9 +143,7 @@ a {
     padding: 50px;
     border-radius: 10px;
     background-color: var(--login-1);
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+
 }
 
 
@@ -214,15 +201,7 @@ a {
         columns: 2;
 
     }
-    /* aside { */
-        /* max-width: 20%; */
-       /* display: none; */
-        /* display: flex; */
-        /* align-items: flex-end; */
-        /* flex-direction: column; */
-        /* justify-content: flex-end; */
-        
-    /* } */
+
     aside {
         height: 10dvh;
     }
@@ -323,12 +302,6 @@ a {
     }
 
 
-    /* .hamburger-line > span {
-        padding-right: 52px;
-    } */
-    /* #home-icon {
-        padding-left: 7px;
-    } */
 }
 
 @media(min-width: 900px){

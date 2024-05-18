@@ -9,17 +9,6 @@ const profilePictureSchema = new Schema({
     name: {
         type: String
     },
-    // userTag: {
-    //     type: String
-    // },
-    // profilePic: {
-    //     type: String
-    // },
-    // username: {
-    //     type: String,
-    //     required: true,
-    //     unique: true
-    // }
    
 })
 

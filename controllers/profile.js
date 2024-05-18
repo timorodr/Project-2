@@ -32,15 +32,11 @@ router.get("/", async (req, res) => {
     try {
 
         const username = req.session.username
-        
-        // const tattoos = await Tattoo.find({ username })
         const profile = await Profile.find({ username })
-        // const user = await User.findOne({ username })
-        // const usersTattoo = await Tattoo.find({ username })
         
         
-        console.log(username)
-        // console.log(tattoos)
+        console.log(profile)
+
      
 
         res.render("profile/index.ejs", { username, profile})
@@ -58,10 +54,6 @@ router.get("/", async (req, res) => {
 router.get("/new", (req, res) => {
     res.render("profile/new.ejs")
 })
-
-// router.get("/newsettings", (req, res) => {
-//     res.render("tattoos/newsettings.ejs")
-// })
 
 
 //** CREATE ROUTE */
@@ -81,20 +73,7 @@ router.post("/", async (req, res) => {
     }
 })
 
-// router.post("/", async (req, res) => {
-//     try {
 
-//         req.body.username = req.session.username
-
-//         await Tattoo.create(req.body)
-
-//         res.redirect("/tattooly")
-
-//     } catch(error) {
-
-//         res.status(400).send(error.message)
-//     }
-// })
 
 //** EDIT ROUTE */
 
